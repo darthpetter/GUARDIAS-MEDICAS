@@ -34,7 +34,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/etUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -50,7 +50,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editTextTextPassword"
+                android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -79,6 +79,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/boton_registro"
+                    android:onClick="registrar"
                     android:text="Registrate"
                     android:textAllCaps="false"
                     android:textColor="@color/cielo"
@@ -91,6 +92,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/boton_login"
+                    android:onClick="ingresar"
                     android:text="Ingresar"
                     android:textAllCaps="false"
                     android:textColor="@color/verde_texto"
