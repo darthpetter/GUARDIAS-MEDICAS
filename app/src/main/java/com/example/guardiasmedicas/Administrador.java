@@ -41,5 +41,9 @@ public class Administrador extends AppCompatActivity {
         Intent estadisticas_intent=new Intent(this,Estadisticas.class);
         startActivity(estadisticas_intent);
     }
+    public void adm_roles(View v){
+        Intent intent=new Intent(this,Administrador_Data_Medicos.class);
+        startActivity(intent);
+    }
 
 }

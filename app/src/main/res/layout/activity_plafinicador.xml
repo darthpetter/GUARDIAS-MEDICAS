@@ -99,6 +99,7 @@
                 android:background="@drawable/bloque_redondeado"
                 android:drawableTop="@drawable/guardia_icon"
                 android:fontFamily="@font/dylangothic_regular"
+                android:onClick="guardias"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
                 android:text="Guardias Médicas"

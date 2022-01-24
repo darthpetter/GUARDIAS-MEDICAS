@@ -42,4 +42,8 @@ public class Plafinicador extends AppCompatActivity {
         Intent intent=new Intent(this,Estadisticas.class);
         startActivity(intent);
     }
+    public void guardias(View v){
+        Intent intent=new Intent(this,Planificador_Guardias.class);
+        startActivity(intent);
+    }
 }
