@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradiente_verde_azul"
-    tools:context=".Plafinicador">
-
+    tools:context=".Administrador">
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="321dp"
@@ -46,6 +45,7 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
@@ -61,7 +61,7 @@
             android:id="@+id/imageView4"
             android:layout_width="168dp"
             android:layout_height="306dp"
-            android:layout_gravity="center|start|left"
+            android:layout_gravity="start|left"
             app:srcCompat="@drawable/medico" />
 
         <LinearLayout
@@ -101,7 +101,7 @@
                 android:fontFamily="@font/dylangothic_regular"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
-                android:text="Guardias Médicas"
+                android:text="Administrar Roles"
                 android:textAllCaps="false"
                 android:textColor="@color/verde_texto"
                 android:textSize="16sp" />

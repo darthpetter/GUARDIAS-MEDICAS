@@ -9,10 +9,14 @@
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/drawable/gradiente_verde_azul.xml" value="0.2703125" />
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/drawable/im.xml" value="0.2703125" />
+        <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/font/fuentes_sistema.xml" value="0.21081081081081082" />
+        <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/font/gothic.xml" value="0.21328125" />
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_acerca_nosotros.xml" value="0.4" />
-        <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_estadisticas.xml" value="0.1793478260869565" />
-        <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_main.xml" value="0.6" />
-        <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_plafinicador.xml" value="0.5769230769230769" />
+        <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_administrador.xml" value="0.5067497403946002" />
+        <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_estadisticas.xml" value="0.152" />
+        <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_main.xml" value="0.35260115606936415" />
+        <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_plafinicador.xml" value="0.4" />
+        <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_supervisor.xml" value="0.2" />
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/menu/main_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2703125" />
       </map>

@@ -23,16 +23,29 @@ public class MainActivity extends AppCompatActivity {
     public void ingresar(View v){
         if(username.getText().toString().equals("administrador") && password.getText().toString().equals("admin123")){
             Toast.makeText(this, "Bienvenido Administrador", Toast.LENGTH_SHORT).show();
+            Intent administrador_intent=new Intent(this,Administrador.class);
+            startActivity(administrador_intent);
+            limpiarCampos();
         }
         else if(username.getText().toString().equals("planificador") && password.getText().toString().equals("plan123")){
             Toast.makeText(this, "Bienvenido Planificador", Toast.LENGTH_SHORT).show();
-            Intent intent=new Intent(this,Plafinicador.class);
-            startActivity(intent);
+            Intent planificador_intent=new Intent(this,Plafinicador.class);
+            startActivity(planificador_intent);
+            limpiarCampos();
         }
         else if(username.getText().toString().equals("supervisor") && password.getText().toString().equals("super123")){
             Toast.makeText(this, "Bienvenido Planificador", Toast.LENGTH_SHORT).show();
+            Intent supervisor_intent=new Intent(this,Supervisor.class);
+            startActivity(supervisor_intent);
+            limpiarCampos();
         }
-        else
+        else {
             Toast.makeText(this, "Acceso denegado, vuelve a intentarlo.", Toast.LENGTH_SHORT).show();
+            password.setText("");
+        }
+    }
+    public void limpiarCampos(){
+        username.setText("");
+        password.setText("");
     }
 }

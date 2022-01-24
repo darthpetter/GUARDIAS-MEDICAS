@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradiente_verde_azul"
-    tools:context=".Plafinicador">
-
+    tools:context=".Supervisor">
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="321dp"
@@ -25,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:fontFamily="@font/fuentes_sistema"
+            android:fontFamily="@font/dylangothic_regular"
             android:text="Bienvenido"
             android:textSize="24sp"
             app:layout_constraintTop_toTopOf="parent" />
@@ -34,7 +33,7 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/fuentes_sistema"
+            android:fontFamily="@font/dylangothic_regular"
             android:text="Doctor Iván Kaviedes"
             android:textColor="@color/celeste_bienvenida"
             android:textSize="20sp" />
@@ -80,7 +79,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bloque_redondeado"
                 android:drawableTop="@drawable/icono_stats"
-                android:fontFamily="@font/dylangothic_regular"
+                android:fontFamily="@font/fuentes_sistema"
                 android:onClick="estadisticas"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
@@ -98,13 +97,14 @@
                 android:layout_weight="1"
                 android:background="@drawable/bloque_redondeado"
                 android:drawableTop="@drawable/guardia_icon"
-                android:fontFamily="@font/dylangothic_regular"
+                android:fontFamily="@font/fuentes_sistema"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
-                android:text="Guardias Médicas"
+                android:text="Datos Médicos"
                 android:textAllCaps="false"
                 android:textColor="@color/verde_texto"
                 android:textSize="16sp" />
         </LinearLayout>
     </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
