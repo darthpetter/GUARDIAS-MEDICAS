@@ -24,7 +24,7 @@ public class Supervisor_Nuevo_Medico extends AppCompatActivity {
             finish();
         }
         else
-            Toast.makeText(this, "Por favor, llene todos los campos del formulario.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Por favor, llena todos los campos.\uD83E\uDD7A", Toast.LENGTH_SHORT).show();
 
     }
     public int camposLlenos(){

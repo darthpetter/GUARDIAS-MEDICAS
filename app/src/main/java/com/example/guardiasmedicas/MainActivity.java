@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
         password=findViewById(R.id.etPassword);
     }
     public void registrar(View v){
-
+        Intent registro=new Intent(this,Registro.class);
+        startActivity(registro);
     }
     public void ingresar(View v){
         if(username.getText().toString().equals("administrador") && password.getText().toString().equals("admin123")){

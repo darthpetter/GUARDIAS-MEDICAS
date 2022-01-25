@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GUARDIASMEDICAS">
         <activity
+            android:name=".Registro"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:exported="false" />
+        <activity
             android:name=".Supervisor_Nuevo_Medico"
             android:exported="false" />
         <activity
