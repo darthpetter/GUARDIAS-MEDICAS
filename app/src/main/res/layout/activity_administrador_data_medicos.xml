@@ -8,21 +8,24 @@
     tools:context=".Administrador_Data_Medicos">
 
   <TableLayout
-      android:id="@+id/tableLayout2"
-      android:layout_width="350dp"
-      android:layout_height="421dp"
+      android:id="@+id/tableLayout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginBottom="77dp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.494">
+      app:layout_constraintTop_toTopOf="parent">
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/black">
 
       <TextView
-          android:id="@+id/textView13"
+          android:id="@+id/textView15"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="1"
@@ -30,7 +33,7 @@
           android:text="Nombres" />
 
       <TextView
-          android:id="@+id/textView14"
+          android:id="@+id/textView16"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="1"
@@ -38,13 +41,119 @@
           android:text="Rol" />
 
       <TextView
-          android:id="@+id/textView17"
+          android:id="@+id/textView18"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="1"
           android:gravity="center"
           android:text="Op" />
+    </TableRow>
 
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B4FFFFFF">
+
+      <TextView
+          android:id="@+id/fu1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="Juan Perez"
+          android:textColor="@color/verde_texto"
+          android:textSize="12sp" />
+
+      <TextView
+          android:id="@+id/tv2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="Administrador"
+          android:textColor="@color/verde_texto"
+          android:textSize="12sp" />
+
+      <ImageView
+          android:id="@+id/imageView7"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_weight="1"
+          android:onClick="showPopUp"
+          app:srcCompat="@drawable/adm_roles" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B4FFFFFF">
+
+      <TextView
+          android:id="@+id/fu3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="Yanfri Guerra"
+          android:textColor="@color/verde_texto"
+          android:textSize="12sp" />
+
+      <TextView
+          android:id="@+id/fu2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="Supervisor"
+          android:textColor="@color/verde_texto"
+          android:textSize="12sp" />
+
+      <ImageView
+          android:id="@+id/imageView8"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_weight="1"
+          android:onClick="showPopUp"
+          app:srcCompat="@drawable/adm_roles" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B4FFFFFF">
+
+      <TextView
+          android:id="@+id/fu5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="Supervisor"
+          android:textColor="@color/verde_texto"
+          android:textSize="12sp" />
+
+      <TextView
+          android:id="@+id/fu4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:text="Yanfri Guerra"
+          android:textColor="@color/verde_texto"
+          android:textSize="12sp" />
+
+      <ImageView
+          android:id="@+id/imageView9"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_weight="1"
+          android:onClick="showPopUp"
+          app:srcCompat="@drawable/adm_roles" />
     </TableRow>
 
   </TableLayout>

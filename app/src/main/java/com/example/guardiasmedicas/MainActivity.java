@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             limpiarCampos();
         }
         else if(username.getText().toString().equals("supervisor") && password.getText().toString().equals("super123")){
-            Toast.makeText(this, "Bienvenido Planificador", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Bienvenido Supervisor", Toast.LENGTH_SHORT).show();
             Intent supervisor_intent=new Intent(this,Supervisor.class);
             startActivity(supervisor_intent);
             limpiarCampos();

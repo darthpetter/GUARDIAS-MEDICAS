@@ -13,14 +13,18 @@
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/font/gothic.xml" value="0.21328125" />
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_acerca_nosotros.xml" value="0.4" />
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_administrador.xml" value="0.5067497403946002" />
-        <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_administrador_data_medicos.xml" value="0.16" />
+        <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_administrador_data_medicos.xml" value="0.6" />
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_estadisticas.xml" value="0.152" />
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_main.xml" value="0.35260115606936415" />
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_plafinicador.xml" value="0.4" />
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_planificador_guardias.xml" value="0.180078125" />
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_planificador_registro_guardia.xml" value="0.536" />
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_supervisor.xml" value="0.2" />
+        <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_supervisor_medicos.xml" value="0.72" />
+        <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/layout/activity_supervisor_nuevo_medico.xml" value="0.536" />
+        <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/menu/acciones_admroles.xml" value="0.38125" />
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/menu/main_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/menu/menu_admroles.xml" value="0.38125" />
         <entry key="..\:/Users/PETTER/AndroidStudioProjects/GUARDIASMEDICAS/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2703125" />
       </map>
     </option>

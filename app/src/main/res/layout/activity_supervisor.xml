@@ -98,6 +98,7 @@
                 android:background="@drawable/bloque_redondeado"
                 android:drawableTop="@drawable/guardia_icon"
                 android:fontFamily="@font/fuentes_sistema"
+                android:onClick="datos_medicos"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
                 android:text="Datos Médicos"

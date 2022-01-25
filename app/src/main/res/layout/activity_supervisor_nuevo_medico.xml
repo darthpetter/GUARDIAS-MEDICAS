@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradiente_verde_azul"
+    tools:context=".Supervisor_Nuevo_Medico">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.826">
+
+        <EditText
+            android:id="@+id/etNombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bloque_redondeado"
+            android:ems="10"
+            android:hint="Nombres"
+            android:inputType="textPersonName"
+            android:textColor="@color/verde_texto"
+            android:theme="@style/Theme.GUARDIASMEDICAS.editText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/etApellidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bloque_redondeado"
+            android:ems="10"
+            android:hint="Apellidos"
+            android:inputType="textPersonName"
+            android:textColor="@color/verde_texto"
+            android:theme="@style/Theme.GUARDIASMEDICAS.editText" />
+
+        <EditText
+            android:id="@+id/etEspecializacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bloque_redondeado"
+            android:ems="10"
+            android:hint="Especialización"
+            android:inputType="textPersonName"
+            android:textColor="@color/verde_texto"
+            android:theme="@style/Theme.GUARDIASMEDICAS.editText" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bloque_redondeado"
+            android:ems="10"
+            android:hint="Correo Electrónico"
+            android:inputType="textPersonName"
+            android:textColor="@color/verde_texto"
+            android:theme="@style/Theme.GUARDIASMEDICAS.editText" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="141dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bloque_redondeado"
+        android:drawableTop="@drawable/save_icon"
+        android:onClick="guardar"
+        android:padding="5dp"
+
+        android:text="Guardar"
+        android:textAllCaps="false"
+        android:textColor="@color/verde_texto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registro de Médicos"
+        android:textColor="@color/celeste_bienvenida"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.831" />
+</androidx.constraintlayout.widget.ConstraintLayout>

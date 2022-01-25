@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/supervisor"
+        android:title="Supervisor" />
+    <item
+        android:id="@+id/planificador"
+        android:title="Planificador" />
+    <item
+        android:id="@+id/administrador"
+        android:title="Administrador" />
+    <item
+        android:id="@+id/eliminar"
+        android:icon="@drawable/ic_baseline_delete_24"
+        android:title="Eliminar" />
+</menu>

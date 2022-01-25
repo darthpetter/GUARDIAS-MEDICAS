@@ -41,5 +41,8 @@ public class Supervisor extends AppCompatActivity {
         Intent estadisticas_intent=new Intent(this,Estadisticas.class);
         startActivity(estadisticas_intent);
     }
-
+    public void datos_medicos(View v){
+        Intent intent=new Intent(this,Supervisor_Medicos.class);
+        startActivity(intent);
+    }
 }
