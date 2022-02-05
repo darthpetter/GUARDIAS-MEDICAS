@@ -103,6 +103,17 @@
                     android:textSize="14sp" />
             </LinearLayout>
 
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:onClick="borrarSP"
+                android:text="Borrar Datos Guardados"
+                android:textAllCaps="false"
+                android:textSize="12sp" />
+
         </LinearLayout>
 
     </FrameLayout>
