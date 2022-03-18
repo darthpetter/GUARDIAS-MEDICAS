@@ -21,7 +21,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
     private static final String TABLE_TURNOS="CREATE TABLE turnos(" +
             "_id INTEGER PRIMARY KEY AUTOINCREMENT," +
-            "medicoId INTEGER" +
+            "medicoId INTEGER," +
             "fechaHoraInicio DATETIME," +
             "fechaHoraSalida DATETIME," +
             "FOREIGN KEY(medicoId) REFERENCES medicos(_id));";
@@ -33,7 +33,6 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             ");";
 
     private static final String DB_NAME="hospital";
-    private static final String TABLE_CREATE=TABLE_ROLES+TABLE_MEDICOS+TABLE_TURNOS+TABLE_USERS;
     private static final int DB_VERSION=1;
 
     public MySQLiteHelper(Context context){
@@ -42,7 +41,10 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL(TABLE_CREATE);
+        sqLiteDatabase.execSQL(TABLE_ROLES);
+        sqLiteDatabase.execSQL(TABLE_MEDICOS);
+        sqLiteDatabase.execSQL(TABLE_TURNOS);
+        sqLiteDatabase.execSQL(TABLE_USERS);
     }
 
     @Override

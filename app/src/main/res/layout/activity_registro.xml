@@ -34,7 +34,7 @@
             android:theme="@style/Theme.GUARDIASMEDICAS.editText" />
 
         <EditText
-            android:id="@+id/etEmail1"
+            android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
@@ -46,7 +46,7 @@
             android:theme="@style/Theme.GUARDIASMEDICAS.editText" />
 
         <EditText
-            android:id="@+id/etContraseña"
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="6dp"

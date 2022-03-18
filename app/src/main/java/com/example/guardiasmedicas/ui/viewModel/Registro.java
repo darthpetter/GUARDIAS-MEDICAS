@@ -8,29 +8,39 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.guardiasmedicas.R;
+import com.example.guardiasmedicas.data.model.User;
+import com.example.guardiasmedicas.databinding.ActivityRegistroBinding;
+import com.example.guardiasmedicas.databinding.ActivitySupervisorBinding;
+import com.example.guardiasmedicas.domain.RegisterController;
 
 public class Registro extends AppCompatActivity {
-    private EditText nombres, contraseña, email;
+
+    private ActivityRegistroBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        binding=ActivityRegistroBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro);
-
-        nombres=findViewById(R.id.etNombresC);
-        contraseña=findViewById(R.id.etContraseña);
-        email=findViewById(R.id.etEmail1);
+        setContentView(binding.getRoot());
     }
+
     public void registrar(View v){
-        if(campos()){
-            Toast.makeText(this, "Registrando ;);)", Toast.LENGTH_SHORT).show();
+        if(!campos()){
+            User user=new User(
+                    binding.etEmail.getText().toString(),
+                    binding.etPassword.getText().toString()
+            );
+
+            RegisterController.registerUser(user,this);
+
             finish();
         }else
             Toast.makeText(this, "Por favor, llena todos los campos.\uD83E\uDD7A", Toast.LENGTH_SHORT).show();
     }
+
+
     public boolean campos(){
-        if(nombres.getText().toString().isEmpty() && contraseña.getText().toString().isEmpty() && email.getText().toString().isEmpty())
-            return false;
-        else
-            return true;
+        return binding.etEmail.getText().toString().isEmpty() &&
+        binding.etPassword.getText().toString().isEmpty();
     }
 }

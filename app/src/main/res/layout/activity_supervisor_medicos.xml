@@ -53,74 +53,12 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#B4FFFFFF">
-
-            <TextView
-                android:id="@+id/fu1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Juan Perez"
-                android:textColor="@color/verde_texto"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/tv2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Pediatra"
-                android:textColor="@color/verde_texto"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/tv5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="juan@gmail,com"
-                android:textColor="@color/verde_texto"
-                android:textSize="12sp" />
-        </TableRow>
+            android:background="#B4FFFFFF"/>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#B4FFFFFF">
-
-            <TextView
-                android:id="@+id/fu1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Ivan Kaviedes"
-                android:textColor="@color/verde_texto"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/tv2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Cardiologo"
-                android:textColor="@color/verde_texto"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/tv5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="ivankkk@gmail.com"
-                android:textColor="@color/verde_texto"
-                android:textSize="12sp" />
-        </TableRow>
+            android:background="#B4FFFFFF"/>
 
     </TableLayout>
 
