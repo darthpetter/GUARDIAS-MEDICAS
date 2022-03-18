@@ -9,6 +9,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.guardiasmedicas.ui.viewModel.AcercaNosotros;
+import com.example.guardiasmedicas.ui.viewModel.Estadisticas;
+import com.example.guardiasmedicas.ui.viewModel.Planificador_Guardias;
+
 
 public class Plafinicador extends AppCompatActivity {
 
@@ -28,7 +32,7 @@ public class Plafinicador extends AppCompatActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.acercade:
-                Intent acercanos=new Intent(this,AcercaNosotros.class);
+                Intent acercanos=new Intent(this, AcercaNosotros.class);
                 startActivity(acercanos);
                 return true;
             case R.id.salir:
@@ -39,11 +43,11 @@ public class Plafinicador extends AppCompatActivity {
         }
     }
     public void estadisticas(View v){
-        Intent intent=new Intent(this,Estadisticas.class);
+        Intent intent=new Intent(this, Estadisticas.class);
         startActivity(intent);
     }
     public void guardias(View v){
-        Intent intent=new Intent(this,Planificador_Guardias.class);
+        Intent intent=new Intent(this, Planificador_Guardias.class);
         startActivity(intent);
     }
 }
