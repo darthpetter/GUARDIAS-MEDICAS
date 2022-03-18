@@ -1,4 +1,4 @@
-package com.example.guardiasmedicas;
+package com.example.guardiasmedicas.ui.viewModel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.example.guardiasmedicas.R;
 
 public class Administrador extends AppCompatActivity {
 
@@ -27,7 +29,7 @@ public class Administrador extends AppCompatActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.acercade:
-                Intent acercanos=new Intent(this,AcercaNosotros.class);
+                Intent acercanos=new Intent(this, AcercaNosotros.class);
                 startActivity(acercanos);
                 return true;
             case R.id.salir:
@@ -38,11 +40,11 @@ public class Administrador extends AppCompatActivity {
         }
     }
     public void estadisticas(View V){
-        Intent estadisticas_intent=new Intent(this,Estadisticas.class);
+        Intent estadisticas_intent=new Intent(this, Estadisticas.class);
         startActivity(estadisticas_intent);
     }
     public void adm_roles(View v){
-        Intent intent=new Intent(this,Administrador_Data_Medicos.class);
+        Intent intent=new Intent(this, Administrador_Data_Medicos.class);
         startActivity(intent);
     }
 

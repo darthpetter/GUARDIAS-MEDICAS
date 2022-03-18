@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradiente_verde_azul"
     android:padding="25dp"
-    tools:context=".Registro">
+    tools:context=".ui.viewModel.Registro">
 
     <ImageView
         android:id="@+id/imageView10"

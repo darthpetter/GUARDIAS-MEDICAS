@@ -1,4 +1,4 @@
-package com.example.guardiasmedicas;
+package com.example.guardiasmedicas.ui.viewModel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.guardiasmedicas.R;
 
 public class Registro extends AppCompatActivity {
     private EditText nombres, contraseña, email;

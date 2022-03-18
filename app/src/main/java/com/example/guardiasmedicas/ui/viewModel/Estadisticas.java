@@ -1,8 +1,10 @@
-package com.example.guardiasmedicas;
+package com.example.guardiasmedicas.ui.viewModel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.guardiasmedicas.R;
 
 public class Estadisticas extends AppCompatActivity {
 

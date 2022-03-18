@@ -10,42 +10,42 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GUARDIASMEDICAS">
         <activity
-            android:name=".Registro"
+            android:name=".ui.viewModel.Registro"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:exported="false" />
         <activity
-            android:name=".Supervisor_Nuevo_Medico"
+            android:name=".ui.viewModel.Supervisor_Nuevo_Medico"
             android:exported="false" />
         <activity
-            android:name=".Supervisor_Medicos"
+            android:name=".ui.viewModel.Supervisor_Medicos"
             android:exported="false" />
         <activity
-            android:name=".Administrador_Data_Medicos"
+            android:name=".ui.viewModel.Administrador_Data_Medicos"
             android:exported="false" />
         <activity
-            android:name=".Planificador_Registro_Guardia"
+            android:name=".ui.viewModel.Planificador_Registro_Guardia"
             android:exported="false" />
         <activity
-            android:name=".Planificador_Guardias"
+            android:name=".ui.viewModel.Planificador_Guardias"
             android:exported="false" />
         <activity
-            android:name=".Administrador"
+            android:name=".ui.viewModel.Administrador"
             android:exported="false"
             android:fontFamily="@font/fuentes_sistema" />
         <activity
-            android:name=".Supervisor"
+            android:name=".ui.viewModel.Supervisor"
             android:exported="false" />
         <activity
-            android:name=".AcercaNosotros"
+            android:name=".ui.viewModel.AcercaNosotros"
             android:exported="false" />
         <activity
-            android:name=".Estadisticas"
+            android:name=".ui.viewModel.Estadisticas"
             android:exported="false" />
         <activity
-            android:name=".Plafinicador"
+            android:name=".ui.viewModel.Plafinicador"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.viewModel.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>

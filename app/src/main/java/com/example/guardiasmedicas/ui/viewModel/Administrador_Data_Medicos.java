@@ -1,4 +1,4 @@
-package com.example.guardiasmedicas;
+package com.example.guardiasmedicas.ui.viewModel;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
 import android.widget.Toast;
+
+import com.example.guardiasmedicas.R;
 
 public class Administrador_Data_Medicos extends AppCompatActivity {
 

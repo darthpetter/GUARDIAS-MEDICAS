@@ -1,4 +1,4 @@
-package com.example.guardiasmedicas;
+package com.example.guardiasmedicas.ui.viewModel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.guardiasmedicas.R;
 
 public class Planificador_Registro_Guardia extends AppCompatActivity {
     private Spinner sp1;

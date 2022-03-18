@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradiente_verde_azul"
-    tools:context=".Supervisor_Medicos">
+    tools:context=".ui.viewModel.Supervisor_Medicos">
 
     <TableLayout
         android:id="@+id/tableLayout"

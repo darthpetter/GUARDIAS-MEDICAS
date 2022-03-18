@@ -1,4 +1,4 @@
-package com.example.guardiasmedicas;
+package com.example.guardiasmedicas.ui.viewModel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.guardiasmedicas.R;
 import com.example.guardiasmedicas.ui.viewModel.AcercaNosotros;
 import com.example.guardiasmedicas.ui.viewModel.Estadisticas;
 import com.example.guardiasmedicas.ui.viewModel.Planificador_Guardias;

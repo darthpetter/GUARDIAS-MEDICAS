@@ -1,4 +1,4 @@
-package com.example.guardiasmedicas;
+package com.example.guardiasmedicas.ui.viewModel;
 
 
 import androidx.appcompat.app.AlertDialog;
@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.guardiasmedicas.R;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         password.setText(prefe.getString("password",""));
     }
     public void registrar(View v){
-        Intent registro=new Intent(this,Registro.class);
+        Intent registro=new Intent(this, Registro.class);
         startActivity(registro);
     }
     public void ingresar(View v){
