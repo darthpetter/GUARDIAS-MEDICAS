@@ -15,6 +15,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             "_id INTEGER PRIMARY KEY AUTOINCREMENT," +
             "nombres TEXT," +
             "apellidos TEXT," +
+            "email TEXT,"+
             "rolID INTEGER," +
             "FOREIGN KEY(rolID) REFERENCES roles(_id));";
 
@@ -25,8 +26,14 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             "fechaHoraSalida DATETIME," +
             "FOREIGN KEY(medicoId) REFERENCES medicos(_id));";
 
+    private static final String TABLE_USERS="CREATE TABLE users(" +
+            "_id INTEGER PRIMARY KEY AUTOINCREMENT," +
+            "email TEXT UNIQUE NOT NULL," +
+            "password TEXT NOT NULL" + //TODO añadir elementos hash para encriptar la clave o sino no
+            ");";
+
     private static final String DB_NAME="hospital";
-    private static final String TABLE_CREATE=TABLE_ROLES+TABLE_MEDICOS+TABLE_TURNOS;
+    private static final String TABLE_CREATE=TABLE_ROLES+TABLE_MEDICOS+TABLE_TURNOS+TABLE_USERS;
     private static final int DB_VERSION=1;
 
     public MySQLiteHelper(Context context){
