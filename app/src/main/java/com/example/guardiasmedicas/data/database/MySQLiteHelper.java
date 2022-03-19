@@ -15,6 +15,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             "_id INTEGER PRIMARY KEY AUTOINCREMENT," +
             "nombres TEXT," +
             "apellidos TEXT," +
+            "especializacion TEXT,"+
             "email TEXT"+
             ");";
 

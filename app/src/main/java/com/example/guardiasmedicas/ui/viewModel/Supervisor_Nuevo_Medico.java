@@ -4,35 +4,43 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.guardiasmedicas.R;
+import com.example.guardiasmedicas.data.model.Medico;
+import com.example.guardiasmedicas.databinding.ActivitySupervisorNuevoMedicoBinding;
+import com.example.guardiasmedicas.domain.MedicoController;
 
 public class Supervisor_Nuevo_Medico extends AppCompatActivity {
-    private EditText etNombres, etApellidos, etEspecializacion, etEmail;
+    private ActivitySupervisorNuevoMedicoBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        binding=ActivitySupervisorNuevoMedicoBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_supervisor_nuevo_medico);
-        etNombres=findViewById(R.id.etNombres);
-        etApellidos=findViewById(R.id.etApellidos);
-        etEspecializacion=findViewById(R.id.etEspecializacion);
-        etEmail=findViewById(R.id.etEmail);
+        setContentView(binding.getRoot());
     }
     public void guardar(View v){
-        if(camposLlenos()==1) {
-            Toast.makeText(this, "Nuevo médico agregado al registro.", Toast.LENGTH_SHORT).show();
+        if(!camposLlenos()) {
+            Medico medico=new Medico(
+                    binding.etNombres.getText().toString(),
+                    binding.etApellidos.getText().toString(),
+                    binding.etEmail.getText().toString(),
+                    binding.etEspecializacion.getText().toString()
+            );
+
+            MedicoController controller=new MedicoController(this);
+            controller.insertOnDB(medico);
+
             finish();
         }
         else
             Toast.makeText(this, "Por favor, llena todos los campos.\uD83E\uDD7A", Toast.LENGTH_SHORT).show();
 
     }
-    public int camposLlenos(){
-        if(etNombres.getText().toString().equals("") || etNombres.getText().toString().equals("") || etNombres.getText().toString().equals("") || etNombres.getText().toString().equals(""))
-            return 0;
-        else
-            return 1;
+    public boolean camposLlenos(){
+        return binding.etNombres.getText().toString().isEmpty() &&
+                binding.etApellidos.getText().toString().isEmpty() &&
+                binding.etEmail.getText().toString().isEmpty() &&
+                binding.etEspecializacion.getText().toString().isEmpty();
     }
 }

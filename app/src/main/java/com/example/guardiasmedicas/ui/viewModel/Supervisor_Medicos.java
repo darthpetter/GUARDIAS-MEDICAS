@@ -20,4 +20,5 @@ public class Supervisor_Medicos extends AppCompatActivity {
         finish();
         startActivity(intent);
     }
+
 }
