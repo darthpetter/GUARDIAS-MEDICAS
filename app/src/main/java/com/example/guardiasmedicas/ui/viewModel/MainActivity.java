@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(registro);
     }
     public void ingresar(View v){
-        if(!verificarCampos()) {
+        if(verificarCampos()) {
             Toast.makeText(this, "Llene los campos del formulario", Toast.LENGTH_SHORT).show();
         }else{
             dialogSP();

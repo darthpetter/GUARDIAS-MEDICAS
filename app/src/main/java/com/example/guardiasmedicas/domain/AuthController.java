@@ -21,16 +21,19 @@ public class AuthController {
                 null
         );
 
-        cursor.moveToFirst();
+        if(cursor.getCount()==1){
+            cursor.moveToFirst();
 
-        String emailR = cursor.getString(cursor.getColumnIndexOrThrow("email"));
-        String passwordR = cursor.getString(cursor.getColumnIndexOrThrow("password"));
+            String emailR = cursor.getString(cursor.getColumnIndexOrThrow("email"));
+            String passwordR = cursor.getString(cursor.getColumnIndexOrThrow("password"));
 
-
-        if (email.equals(emailR) && password.equals(passwordR)) {
-            message("Coinciden");
-        }else{
-            message("Credenciales no válidas.");
+            if (email.equals(emailR) && password.equals(passwordR)) {
+                message("Coinciden");
+            }else {
+                message("Credenciales no válidas.");
+            }
+        }else {
+            message("Credenciales no encontradas.");
         }
     }
 
