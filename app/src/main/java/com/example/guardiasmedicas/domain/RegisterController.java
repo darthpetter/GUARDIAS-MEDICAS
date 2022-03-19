@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
-import com.example.guardiasmedicas.core.MySQLiteHelper;
+import com.example.guardiasmedicas.data.database.MySQLiteHelper;
 import com.example.guardiasmedicas.data.model.User;
 
 public class RegisterController {

@@ -42,7 +42,7 @@
             android:name=".ui.viewModel.Estadisticas"
             android:exported="false" />
         <activity
-            android:name=".ui.viewModel.Plafinicador"
+            android:name=".ui.viewModel.Planificador"
             android:exported="false" />
         <activity
             android:name=".ui.viewModel.MainActivity"

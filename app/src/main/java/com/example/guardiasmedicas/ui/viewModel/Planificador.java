@@ -15,7 +15,7 @@ import com.example.guardiasmedicas.ui.viewModel.Estadisticas;
 import com.example.guardiasmedicas.ui.viewModel.Planificador_Guardias;
 
 
-public class Plafinicador extends AppCompatActivity {
+public class Planificador extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

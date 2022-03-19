@@ -1,11 +1,17 @@
 package com.example.guardiasmedicas.domain;
 
+
+
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
-import com.example.guardiasmedicas.core.MySQLiteHelper;
+import com.example.guardiasmedicas.data.database.MySQLiteHelper;
+import com.example.guardiasmedicas.ui.viewModel.Administrador;
+import com.example.guardiasmedicas.ui.viewModel.Planificador;
+import com.example.guardiasmedicas.ui.viewModel.Supervisor;
 
 public class AuthController {
     private static Context context;
@@ -26,14 +32,25 @@ public class AuthController {
 
             String emailR = cursor.getString(cursor.getColumnIndexOrThrow("email"));
             String passwordR = cursor.getString(cursor.getColumnIndexOrThrow("password"));
+            int rolId=cursor.getInt(cursor.getColumnIndexOrThrow("rolID"));
 
             if (email.equals(emailR) && password.equals(passwordR)) {
-                message("Coinciden");
+                rolChecker(rolId);
             }else {
                 message("Credenciales no válidas.");
             }
         }else {
             message("Credenciales no encontradas.");
+        }
+    }
+
+    private static void rolChecker(int rolId){
+        if(rolId==1){
+            context.startActivity(new Intent(context,Administrador.class));
+        }else if(rolId==2){
+            context.startActivity(new Intent(context, Supervisor.class));
+        }else if(rolId==3){
+            context.startActivity(new Intent(context, Planificador.class));
         }
     }
 
