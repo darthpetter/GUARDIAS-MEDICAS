@@ -9,6 +9,9 @@ import com.example.guardiasmedicas.data.database.MySQLiteHelper;
 import com.example.guardiasmedicas.data.model.Medico;
 import com.example.guardiasmedicas.data.model.User;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 public class MedicoController {
@@ -30,22 +33,26 @@ public class MedicoController {
     public List<Medico> getFromDB(){
         MySQLiteHelper sqlHelper=new MySQLiteHelper(context);
         SQLiteDatabase db=sqlHelper.getReadableDatabase();
-        List<Medico> medicos=null;
+        List<Medico> medicos= new LinkedList<Medico>(Arrays.asList());;
         if(db!=null){
             Cursor cursor=db.rawQuery("SELECT * FROM medicos",
                     null
             );
 
-            cursor.moveToFirst();
-            while(!cursor.isLast()) {
-                Medico medico = new Medico(
-                        cursor.getString(cursor.getColumnIndexOrThrow("nombres")),
-                        cursor.getString(cursor.getColumnIndexOrThrow("apellidos")),
-                        cursor.getString(cursor.getColumnIndexOrThrow("especializacion")),
-                        cursor.getString(cursor.getColumnIndexOrThrow("email"))
-                );
+            if(cursor.getCount()>0) {
+                cursor.moveToFirst();
+                while (!cursor.isAfterLast()) {
+                    Medico medico = new Medico(
+                            cursor.getString(cursor.getColumnIndexOrThrow("nombres")),
+                            cursor.getString(cursor.getColumnIndexOrThrow("apellidos")),
+                            cursor.getString(cursor.getColumnIndexOrThrow("especializacion")),
+                            cursor.getString(cursor.getColumnIndexOrThrow("email"))
+                    );
 
-                medicos.add(medico);
+                    System.out.println("nombres: "+medico.getNombres());
+                    medicos.add(medico);
+                    cursor.moveToNext();
+                }
             }
 
         }
