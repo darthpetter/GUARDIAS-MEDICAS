@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etNombreE"
+                style="@style/inputs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Nombres"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/etApellidoE"
+                style="@style/inputs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Apellidos"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etEmailE"
+            style="@style/inputs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Correo Electrónico"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/etEspecialidadE"
+            style="@style/inputs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Especialidades"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnDiscard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                style="@style/inputs"
+                app:srcCompat="@drawable/ic_dialog_close_dark" />
+
+            <ImageButton
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/verde_botonlogin"
+                style="@style/inputs"
+                app:srcCompat="@drawable/save_icon" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

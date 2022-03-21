@@ -3,6 +3,7 @@ package com.example.guardiasmedicas.data.model;
 import android.content.ContentValues;
 
 public class Medico {
+    private int id;
     private String nombres, apellidos,especializacion,email;
     private ContentValues modeloInsercion=new ContentValues();
 
@@ -57,5 +58,13 @@ public class Medico {
 
     public void setModeloInsercion(ContentValues modeloInsercion) {
         this.modeloInsercion = modeloInsercion;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

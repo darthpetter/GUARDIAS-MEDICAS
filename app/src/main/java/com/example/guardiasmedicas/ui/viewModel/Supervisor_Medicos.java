@@ -1,14 +1,20 @@
 package com.example.guardiasmedicas.ui.viewModel;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
 import com.example.guardiasmedicas.R;
+import com.example.guardiasmedicas.data.database.MySQLiteHelper;
 import com.example.guardiasmedicas.data.model.Medico;
 import com.example.guardiasmedicas.databinding.ActivitySupervisorBinding;
 import com.example.guardiasmedicas.databinding.ActivitySupervisorMedicosBinding;
@@ -35,6 +41,7 @@ public class Supervisor_Medicos extends AppCompatActivity {
             binding.rvListadoMedicos.setAdapter(new MedicoAdapter(medicos, this));
         }
     }
+
     public void nuevo_medico(View v){
         Intent intent=new Intent(this, Supervisor_Nuevo_Medico.class);
         finish();

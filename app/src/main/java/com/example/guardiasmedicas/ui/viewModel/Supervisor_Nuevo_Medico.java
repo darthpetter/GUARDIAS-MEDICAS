@@ -24,8 +24,9 @@ public class Supervisor_Nuevo_Medico extends AppCompatActivity {
             Medico medico=new Medico(
                     binding.etNombres.getText().toString(),
                     binding.etApellidos.getText().toString(),
-                    binding.etEmail.getText().toString(),
-                    binding.etEspecializacion.getText().toString()
+                    binding.etEspecializacion.getText().toString(),
+                    binding.etEmail.getText().toString()
+
             );
 
             MedicoController controller=new MedicoController(this);
