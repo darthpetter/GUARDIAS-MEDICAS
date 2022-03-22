@@ -10,27 +10,38 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.guardiasmedicas.R;
+import com.example.guardiasmedicas.data.model.Medico;
+import com.example.guardiasmedicas.databinding.ActivityPlanificadorRegistroGuardiaBinding;
+import com.example.guardiasmedicas.domain.MedicoController;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 
 public class Planificador_Registro_Guardia extends AppCompatActivity {
-    private Spinner sp1;
-    private EditText fechainicio, horainicio, fechafin, horafin;
+    private ActivityPlanificadorRegistroGuardiaBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        binding=ActivityPlanificadorRegistroGuardiaBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_planificador_registro_guardia);
+        setContentView(binding.getRoot());
 
-        sp1=findViewById(R.id.spinner);
-        String Medicos[]={"Doctor Ivan Kaviedes","Doctor Juan Perez","Doctora Sufrida Pechiche"};
-        ArrayAdapter<String> adaptador=new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,Medicos);
-        sp1.setAdapter(adaptador);
+        MedicoController medicoControl=new MedicoController(this);
+        List<Medico> medicos=medicoControl.getFromDB();
+        String medicosArray[] = new String[medicos.size()];
 
-        fechainicio=findViewById(R.id.etFechaInicio);
-        fechafin=findViewById(R.id.etFechaFin);
-        horainicio=findViewById(R.id.edtHoraInicio);
-        horafin=findViewById(R.id.etHoraFin);
+
+        for(int i=0;i<medicos.size();i++){
+            medicosArray[i]=medicos.get(i).getNombres()+" "+medicos.get(i).getApellidos();
+        }
+
+        ArrayAdapter<String> adaptador=new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,medicosArray);
+        binding.spMedicos.setAdapter(adaptador);
+
     }
     public void guardar(View v){
-        if(verificar_campos()){
+        if(!verificar_campos()){
             Toast.makeText(this, "Guardia Almacenada Exitosamente!", Toast.LENGTH_SHORT).show();
             finish();
         }else{
@@ -38,9 +49,9 @@ public class Planificador_Registro_Guardia extends AppCompatActivity {
         }
     }
     public boolean verificar_campos(){
-        if(fechainicio.getText().toString().isEmpty() && fechainicio.getText().toString().isEmpty() && horainicio.getText().toString().isEmpty() && horafin.getText().toString().isEmpty())
-            return false;
-        else
-            return true;
+        return binding.edtHoraInicio.getText().toString().isEmpty() &&
+                binding.etHoraFin.getText().toString().isEmpty() &&
+                binding.etFechaInicio.getText().toString().isEmpty() &&
+                binding.etFechaFin.getText().toString().isEmpty();
     }
 }
