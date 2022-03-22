@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.example.guardiasmedicas.R;
 import com.example.guardiasmedicas.data.model.User;
+import com.example.guardiasmedicas.data.util.RadomCodeGenerator;
 import com.example.guardiasmedicas.databinding.ActivityRegistroBinding;
 import com.example.guardiasmedicas.databinding.ActivitySupervisorBinding;
 import com.example.guardiasmedicas.domain.RegisterController;
@@ -26,9 +27,13 @@ public class Registro extends AppCompatActivity {
 
     public void registrar(View v){
         if(!campos()){
+            RadomCodeGenerator random=new RadomCodeGenerator("users",this);
+
             User user=new User(
+                    random.generate(),
                     binding.etEmail.getText().toString(),
-                    binding.etPassword.getText().toString()
+                    binding.etPassword.getText().toString(),
+                    4
             );
 
             RegisterController.registerUser(user,this);

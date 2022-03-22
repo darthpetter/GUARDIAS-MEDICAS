@@ -31,17 +31,25 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             "email TEXT UNIQUE NOT NULL," +
             "password TEXT NOT NULL," + //TODO añadir elementos hash para encriptar la clave o sino no
             "rolID INTEGER," +
-            "FOREIGN KEY(rolID) REFERENCES roles(_id));";
+            "medicoID INTEGER," +
+            "FOREIGN KEY(medicoID) REFERENCES medicos(_id)," +
+            "FOREIGN KEY(rolID) REFERENCES roles(_id)" +
+            ");";
+
+    private static final String ALTER_TABLE_MEDICOS="ALTER TABLE medicos " +
+            "ADD COLUMN userID INTEGER " +
+            "REFERENCES users(_id);";
 
     private static final String INSERT_ROLES="INSERT INTO roles(_id,nombres) " +
             "VALUES(1,'ADMINISTRADOR')," +
             "(2,'SUPERVISOR')," +
-            "(3,'PLANIFICADOR');";
+            "(3,'PLANIFICADOR')," +
+            "(4,'GENERAL');";
 
     private static final String INSERT_DEFAULTUSERS ="INSERT INTO users(email,password,rolID) " +
             "VALUES('administrador@hospital.com','admin123',1)," +
             "('supervisor@hospital.com','super123',2)," +
-            "('planificador@hospital.com','plan123',3);";
+            "('planificador@hospital.com','plan123',3)";
 
 
     private static final String DB_NAME="hospital";
@@ -57,6 +65,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(TABLE_TURNOS);
         sqLiteDatabase.execSQL(TABLE_ROLES);
         sqLiteDatabase.execSQL(TABLE_USERS);
+        sqLiteDatabase.execSQL(ALTER_TABLE_MEDICOS);
         sqLiteDatabase.execSQL(INSERT_ROLES);
         sqLiteDatabase.execSQL(INSERT_DEFAULTUSERS);
     }

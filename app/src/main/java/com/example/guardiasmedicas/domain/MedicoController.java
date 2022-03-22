@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.guardiasmedicas.data.database.MySQLiteHelper;
 import com.example.guardiasmedicas.data.model.Medico;
 import com.example.guardiasmedicas.data.model.User;
+import com.example.guardiasmedicas.data.util.RadomCodeGenerator;
 import com.example.guardiasmedicas.databinding.SupervisorEditMedicoBinding;
 
 import java.util.Arrays;
@@ -31,7 +32,20 @@ public class MedicoController {
         SQLiteDatabase db=sqlHelper.getWritableDatabase();
 
         if(db!=null){
+            RadomCodeGenerator cod=new RadomCodeGenerator("medicos",context);
+            int numero=cod.generate();
+            medico.setId(numero);
+            medico.setUserID(numero);
+
             db.insert("medicos",null,medico.getModeloInsercion());
+
+            User user=new User(
+                    numero,
+                    medico.getEmail(),
+                    medico.getEmail(),
+                    4
+            );
+            RegisterController.registerUser(user,context);
         }
     }
 
@@ -48,12 +62,14 @@ public class MedicoController {
                 cursor.moveToFirst();
                 while (!cursor.isAfterLast()) {
                     Medico medico = new Medico(
+                            cursor.getInt(cursor.getColumnIndexOrThrow("_id")),
                             cursor.getString(cursor.getColumnIndexOrThrow("nombres")),
                             cursor.getString(cursor.getColumnIndexOrThrow("apellidos")),
                             cursor.getString(cursor.getColumnIndexOrThrow("especializacion")),
-                            cursor.getString(cursor.getColumnIndexOrThrow("email"))
+                            cursor.getString(cursor.getColumnIndexOrThrow("email")),
+                            cursor.getInt(cursor.getColumnIndexOrThrow("_id"))
                     );
-                    medico.setId(cursor.getInt(cursor.getColumnIndexOrThrow("_id")));
+
 
                     medicos.add(medico);
                     cursor.moveToNext();
@@ -96,13 +112,14 @@ public class MedicoController {
                 public void onClick(View view) {
 
                     Medico medico=new Medico(
+                            cursor.getInt(cursor.getColumnIndexOrThrow("_id")),
                         binding.etNombreE.getText().toString(),
                         binding.etApellidoE.getText().toString(),
                         binding.etEspecialidadE.getText().toString(),
-                        binding.etEmailE.getText().toString()
+                        binding.etEmailE.getText().toString(),
+                            cursor.getInt(cursor.getColumnIndexOrThrow("_id"))
                     );
 
-                    medico.setId(cursor.getInt(cursor.getColumnIndexOrThrow("_id")));
 
                     if(update(medico)){
                         Toast.makeText(context, "Actualizado correctamente.", Toast.LENGTH_SHORT).show();

@@ -21,8 +21,11 @@ public class RegisterController {
 
         if(db!=null){
             ContentValues cvUser=new ContentValues();
+            cvUser.put("_id",user.getId());
             cvUser.put("email",user.getEmail());
             cvUser.put("password",user.getPassword());
+            cvUser.put("rolID",user.getRolID());
+            cvUser.put("medicoID",user.getId());
 
             checkEmail(user.getEmail());
             try{
