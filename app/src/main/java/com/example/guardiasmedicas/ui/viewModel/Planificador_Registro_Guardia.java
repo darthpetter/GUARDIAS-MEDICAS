@@ -2,9 +2,11 @@ package com.example.guardiasmedicas.ui.viewModel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -15,12 +17,20 @@ import com.example.guardiasmedicas.databinding.ActivityPlanificadorRegistroGuard
 import com.example.guardiasmedicas.domain.MedicoController;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
 public class Planificador_Registro_Guardia extends AppCompatActivity {
     private ActivityPlanificadorRegistroGuardiaBinding binding;
+    final Calendar c = Calendar.getInstance();
+    final int year = c.get(Calendar.YEAR);
+    final int month = c.get(Calendar.MONTH);
+    final int day = c.get(Calendar.DAY_OF_MONTH);
+    final int hour = c.get(Calendar.HOUR_OF_DAY);
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         binding=ActivityPlanificadorRegistroGuardiaBinding.inflate(getLayoutInflater());
@@ -39,6 +49,7 @@ public class Planificador_Registro_Guardia extends AppCompatActivity {
         ArrayAdapter<String> adaptador=new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,medicosArray);
         binding.spMedicos.setAdapter(adaptador);
 
+
     }
     public void guardar(View v){
         if(!verificar_campos()){
@@ -53,5 +64,25 @@ public class Planificador_Registro_Guardia extends AppCompatActivity {
                 binding.etHoraFin.getText().toString().isEmpty() &&
                 binding.etFechaInicio.getText().toString().isEmpty() &&
                 binding.etFechaFin.getText().toString().isEmpty();
+    }
+
+    public void pickDate(View v){
+        DatePickerDialog dateDialog=new DatePickerDialog(this,new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                switch(v.getId()){
+                    case R.id.etFechaInicio:
+                        binding.etFechaInicio.setText(year+"/"+month+"/"+dayOfMonth);
+                        break;
+                    case R.id.etFechaFin:
+                        binding.etFechaFin.setText(year+"/"+month+"/"+dayOfMonth);
+                        break;
+                }
+
+            }
+        } ,year,month,day);
+
+
+        dateDialog.show();
     }
 }
